@@ -1,1 +1,143 @@
+# 3-D
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vôlei de Praia</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffcc00;
+            color: #333;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vôlei de Praia</h1>
+        <nav>
+            <a href="#regras">Regras</a>
+            <a href="#equipamentos">Equipamentos</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
 
+    <div class="container">
+        <section id="regras">
+            <h2>Regras do Vôlei de Praia</h2>
+            <p>O vôlei de praia é jogado entre duas equipes, cada uma composta por dois jogadores. O objetivo é marcar pontos ao fazer a bola tocar o chão da quadra adversária. Algumas regras importantes incluem:</p>
+            <ul>
+                <li>As partidas são jogadas em sets, geralmente até 21 pontos.</li>
+                <li>Não é permitido tocar na rede durante a jogada.</li>
+                <li>Cada equipe tem direito a três toques na bola antes de enviá-la ao adversário.</li>
+            </ul>
+        </section>
+
+        <section id="equipamentos">
+            <h2>Equipamentos Necessários</h2>
+            <p>Para jogar vôlei de praia, você precisará dos seguintes equipamentos:</p>
+            <ul>
+                <li><strong>Bola de Vôlei:</strong> Específica para a prática de vôlei de praia.</li>
+                <li><strong>Rede:</strong> A altura da rede varia conforme o gênero dos jogadores.</li>
+                <li><strong>Calçado:</strong> Geralmente, os jogadores jogam descalços, mas tênis leves também são uma opção.</li>
+            </ul>
+        </section>
+
+        <section id="galeria">
+            <h2>Galeria de Imagens</h2>
+            <div class="gallery">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+1" alt="Vôlei de Praia 1">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+2" alt="Vôlei de Praia 2">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+3" alt="Vôlei de Praia 3">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+4" alt="Vôlei de Praia 4">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+5" alt="Vôlei de Praia 5">
+                <img src="https://via.placeholder.com/300x200?text=Imagem+6" alt="Vôlei de Praia 6">
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre o Vôlei de Praia</h2>
+            <p>O vôlei de praia é um esporte popular que combina habilidade, resistência e trabalho em equipe. Originado nas praias da Califórnia, ele se tornou um dos esportes mais populares em competições internacionais.</p>
+        </section>
+
+        <div class="buttons">
+            <button onclick="changeFontSize(1)">Aumentar Fonte</button>
+            <button onclick="changeFontSize(-1)">Diminuir Fonte</button>
+            <button onclick="toggleContrast()">Alterar Contraste</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vôlei de Praia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        let currentFontSize = 16;
+        let highContrast = false;
+
+        function changeFontSize(change) {
+            currentFontSize += change;
+            document.body.style.fontSize = currentFontSize + 'px';
+        }
+
+        function toggleContrast() {
+            highContrast = !highContrast;
+            document.body.classList.toggle('high-contrast', highContrast);
+        }
+    </script>
+</body>
+</html>

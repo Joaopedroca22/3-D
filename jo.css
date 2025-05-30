@@ -63,4 +63,3 @@ body {
             highContrast = !highContrast;
             document.body.classList.toggle('high-contrast', highContrast);
         }
-</style>
